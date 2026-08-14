@@ -1,6 +1,6 @@
 // ─── API Client for StudyScene Backend ───
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+const API_BASE = import.meta.env.PROD ? '' : (import.meta.env.VITE_API_BASE || 'http://localhost:3001');
 
 // ─── Helpers ───
 

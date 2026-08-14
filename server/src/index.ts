@@ -44,13 +44,17 @@ app.use('/api/next-step', nextStepRouter);
 // Global error handler
 app.use(errorHandler);
 
-app.listen(PORT, () => {
-  console.log(`StudyScene server running on http://localhost:${PORT}`);
-  console.log(`Health check: http://localhost:${PORT}/api/health`);
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`StudyScene server running on http://localhost:${PORT}`);
+    console.log(`Health check: http://localhost:${PORT}/api/health`);
 
-  if (!process.env.GEMINI_API_KEY) {
-    console.warn('⚠ GEMINI_API_KEY is not set. API calls will fail.');
-  }
-});
+    if (!process.env.GEMINI_API_KEY) {
+      console.warn('⚠ GEMINI_API_KEY is not set. API calls will fail.');
+    }
+  });
+}
+
+export default app;
 
 export { createUploadMiddleware };
