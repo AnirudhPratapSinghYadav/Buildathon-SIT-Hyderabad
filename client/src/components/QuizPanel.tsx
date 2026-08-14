@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useStudy } from '../context/StudyContext';
-import { generateChallenge, generateSimilarProblem } from '../services/api';
+import { generateSimilarProblem } from '../services/api';
 import { QuestionCard } from './QuestionCard';
 import { FeedbackCard } from './FeedbackCard';
 import type { QuizQuestion } from '../types/study';

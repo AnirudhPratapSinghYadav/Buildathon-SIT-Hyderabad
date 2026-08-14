@@ -1,8 +1,6 @@
-import React, { createContext, useContext, useReducer, useCallback } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 import type {
   StudyAnalysis,
-  StudyRegion,
-  Concept,
   Explanation,
   QuizQuestion,
   QuizResult,
