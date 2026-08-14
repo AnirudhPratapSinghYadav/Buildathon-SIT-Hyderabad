@@ -1,0 +1,80 @@
+/* ─── Concept Map ─── */
+
+.concept-map {
+  padding: var(--space-4);
+}
+
+.concept-map__title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+.concept-map__nodes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.concept-map__node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  min-width: 140px;
+  justify-content: center;
+  text-align: center;
+}
+
+.concept-map__node:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-text);
+}
+
+.concept-map__node--selected {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-text);
+}
+
+.concept-map__edge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-1) 0;
+}
+
+.concept-map__edge-line {
+  width: 1px;
+  height: 16px;
+  background-color: var(--color-border);
+}
+
+.concept-map__edge-label {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  font-style: italic;
+  padding: 0 var(--space-2);
+}
+
+.concept-map__edge-arrow {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid var(--color-border);
+}
